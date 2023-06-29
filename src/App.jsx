@@ -11,15 +11,10 @@ import TaskDetails from "./components/TaskDetails";
 
 const App = () => {
   const [tasks, setTasks] = useState([
-    {
+  {
       id: '1',
-      title: 'Estudar Programação',
+      title: 'Caso a API pare de funcionar',
       completed: false,
-    },
-    {
-      id: '2',
-      title: 'Ler Livros',
-      completed: true,
     },
   ]);
   useEffect(() => {
