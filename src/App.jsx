@@ -3,6 +3,10 @@ import "./App.css";
 import Tasks from './components/Tasks';
 import AddTask from "./components/AddTask";
 import {v4 as uuidv4} from 'uuid'
+import Header from './components/Header'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import TaskDetails from "./components/TaskDetails";
+
 
 const App = () => {
   const [tasks, setTasks] = useState([
@@ -45,13 +49,21 @@ const handleTaskDeletion = (taskId) => {
   setTasks(newTasks)
 }
   return (
-    <>
-      <div className='container'>
-        <AddTask handleTaskAddition={handleTaskAddition}/>
-        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} handleTaskDeletion={handleTaskDeletion}/>
-      </div>
-    </>
-  );
+    <Router>
+    <div className='container'>
+      <Header />
+      <Routes>
+        <Route path="/" exact element={(
+          <>
+            <AddTask handleTaskAddition={handleTaskAddition} />
+            <Tasks tasks={tasks} handleTaskClick={handleTaskClick} handleTaskDeletion={handleTaskDeletion} />
+          </>
+        )} />
+        <Route path="/:taskTitle" exact Component={TaskDetails}/>
+      </Routes>
+    </div>
+  </Router>
+);
 };
 
 export default App;
