@@ -8,3 +8,14 @@
   color: white;
   align-items: center;
 }
+
+.task-title{
+  cursor: pointer;
+}
+
+.remove-task-button{
+ background-color: #444;
+ border: none;
+ font-size: 16;
+ color: chartreuse;
+}
