@@ -8,8 +8,8 @@ Prof. Quirino <luiz.quirino@ifsp.edu.br>
 ## Descrição das etapas implementadas :
 
 - etapa 1 - Preparação do ambiente
-
-## Alterações realizadas frente ao modelo de referência apresentado:
-
-- alteração xyz;
-- alteração xpto;
+- etapa 2 - Criação das tarefas e componentes
+- etapa 3 - Concluir e deletar tarefa
+- etapa 4 - parametro URL e TaskDetails
+- etapa 5 - API
+- etapa 6 - detalhes do CSS
